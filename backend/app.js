@@ -22,8 +22,6 @@ const { NODE_ENV } = require('./utils/constants');
 
 mongoose.connect('mongodb://localhost:27017/aroundb');
 
-require('dotenv').config();
-
 app.use(limiter);
 
 app.use(bodyParser.json());
