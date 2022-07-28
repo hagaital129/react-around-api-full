@@ -132,7 +132,6 @@ function App() {
   useEffect(() => {
 
     (async function () {
-      //  the call back shouldnt be async --> react methods are sync 
       if (!isLoggedIn) return
       setisLoading(true)
 
@@ -148,8 +147,6 @@ function App() {
 
         console.log('check your error', error);
         alert("something went wrong")
-
-
       }
       finally {
         setisLoading(false);
@@ -347,7 +344,7 @@ function App() {
     e.preventDefault();
     try {
       if (!email || !password) {
-        alert('something went wrong with the server while the registartion')
+        alert('something went wrong with the server while registering')
         throw new Error('your info is not valid, please try again')
       }
       const newUser = await auth.register(email, password)

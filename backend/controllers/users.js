@@ -36,7 +36,7 @@ const getUserById = async (req, res, next) => {
   }
 };
 
-const getUserInfo = async (req, res, next) => { // done
+const getUserInfo = async (req, res, next) => {
   const { _id } = req.user;
   try {
     const user = await User.findOne({ _id });

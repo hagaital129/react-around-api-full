@@ -14,7 +14,6 @@ const User = require('../models/user');
 require('dotenv').config();
 
 const { JWT_SECRET, NODE_ENV, ADMIN_ID } = process.env;
-
 module.exports = {
   ADMIN_ID,
   bcrypt,
