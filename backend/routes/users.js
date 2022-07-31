@@ -1,7 +1,7 @@
 const usersRouter = require('express').Router();
 
 const { celebrate, Joi } = require('celebrate');
-const { validateURL } = require('../helpers/validaotrs');
+const { validateURL } = require('../helpers/validators');
 
 const {
   deleteUser, getUsersData, getUserById, updateUserInfo, updateUserAvatar, getUserInfo,

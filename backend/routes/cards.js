@@ -2,7 +2,7 @@ const cardsRouter = require('express').Router();
 
 const { celebrate, Joi } = require('celebrate');
 
-const { validateURL } = require('../helpers/validaotrs');
+const { validateURL } = require('../helpers/validators');
 
 const {
   getCardsById, getCards, createCard, deleteCard, likeCard, disLikeCard,
