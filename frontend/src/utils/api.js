@@ -164,7 +164,7 @@ class Api {
 }
 
 export default new Api({
-    baseUrl: "api.hagaital.students.nomoredomainssbs.ru",
+    baseUrl: "http://api.hagaital.students.nomoredomainssbs.ru",
 
 
 });

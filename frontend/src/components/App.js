@@ -32,7 +32,7 @@ function App() {
   const [isImagePopupIsOpen, setIsImagePopupIsOpen] = useState(false)
   const [currentUser, setCurrentUser] = useState({})
   const [cards, setCards] = useState([])
-  const [isLoading, setisLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
   const [isFormLoading, setIsFormLoading] = useState(false)
   const [isDeleteCardPopupOpen, setIsDeleteCardPopupOpen] = useState(false)
   const [cardForDelete, setCardForDelete] = useState({})
@@ -133,7 +133,7 @@ function App() {
 
     (async function () {
       if (!isLoggedIn) return
-      setisLoading(true)
+      setIsLoading(true)
 
       try {
         const cardsData = await api.getInitialCards(userToken);
@@ -149,7 +149,7 @@ function App() {
         alert("something went wrong")
       }
       finally {
-        setisLoading(false);
+        setIsLoading(false);
       }
 
     })();
@@ -161,7 +161,7 @@ function App() {
     (async function checkUsersTokenValidity() {
       try {
         const jwt = userToken
-
+        debugger
         if (!jwt) {
           console.log('the token is not valid')
           return
@@ -238,7 +238,7 @@ function App() {
     catch (e) {
       console.log('something went wrong with updating user info', e);
       alert('something went wrong with updating user info')
-      setisLoading(true)
+      setIsLoading(true)
     }
     finally {
       setIsFormLoading(false)
