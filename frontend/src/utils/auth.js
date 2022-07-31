@@ -15,7 +15,7 @@ function checkResponse(response) {
 
 export async function register(email, password) {
 
-    const response = await fetch(`${BASE_URL}/signup`, {
+    const response = await fetch(`http://api.hagaital.students.nomoredomainssbs.ru/signup`, {
         method: 'POST',
         headers: {
             Accept: 'application/json',
@@ -32,7 +32,7 @@ export async function register(email, password) {
 
 export async function logIn(email, password) {
 
-    const response = await fetch(`${BASE_URL}/signin`, {
+    const response = await fetch(`http://api.hagaital.students.nomoredomainssbs.ru/signin`, {
         method: 'POST',
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -49,7 +49,7 @@ export async function checkingTokenValidity(jwt) {
     if (!jwt) {
         throw new Error('your token in not valid')
     }
-    const response = await fetch(`${BASE_URL}/users/me`, {
+    const response = await fetch(`http://api.hagaital.students.nomoredomainssbs.ru/users/me`, {
         method: 'GET',
         headers:
         {
