@@ -1,5 +1,5 @@
 
-const BASE_URL = 'api.hagai.students.nomoredomainssbs.ru'
+const BASE_URL = 'api.hagaital.students.nomoredomainssbs.ru'
 
 
 
